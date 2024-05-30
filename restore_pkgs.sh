@@ -47,7 +47,7 @@ log "Restoring ${cached_filecount} packages from cache..."
 for cached_filepath in ${cached_filepaths}; do
 
   log "- $(basename "${cached_filepath}") restoring..."
-  sudo tar -xf "${cached_filepath}" -C "${cache_restore_root}" > /dev/null
+  tar -xf "${cached_filepath}" -C "${cache_restore_root}" > /dev/null
   log "  done"
 
   # Execute install scripts if available.    

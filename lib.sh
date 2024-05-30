@@ -24,7 +24,7 @@ function execute_install_script {
     log "- Executing ${install_script_filepath}..."
     # Don't abort on errors; dpkg-trigger will error normally since it is
     # outside its run environment.
-    sudo sh -x ${install_script_filepath} ${4} || true
+    sh -x ${install_script_filepath} ${4} || true
     log "  done"
   fi
 }
